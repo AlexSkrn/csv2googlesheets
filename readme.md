@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/AlexSkrn/csv2googlesheets.svg?branch=master)](https://travis-ci.org/AlexSkrn/csv2googlesheets)
 
+[![PyPI version](https://badge.fury.io/py/csv2googlesheets.svg)](https://badge.fury.io/py/csv2googlesheets)
+
 
 # csv2googlesheets
 

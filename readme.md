@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/AlexSkrn/csv2googlesheets.svg?branch=master)](https://travis-ci.org/AlexSkrn/csv2googlesheets)
+
+
 # csv2googlesheets
 
 Программа предназначена для извлечения данных из csv-файла и записи этих данных в Google Sheets.

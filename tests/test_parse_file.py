@@ -14,7 +14,7 @@ def test_parse_file(tmpdir):
     assert output == [['2', '3', '4'], ['5', '6', '7']]
 
 
-def test_parse_file_raises_error_and_prints_info(tmpdir, capsys):
+def test_parse_file_raises_error_and_prints_info(tmpdir):
     filename = 'data.csv'
     data_file = tmpdir.join(filename)
     data_file.write('')

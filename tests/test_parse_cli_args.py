@@ -21,9 +21,9 @@ def test_parse_cli_args_return_correct_values(monkeypatch):
 @pytest.mark.parametrize(
     'test_input_1,test_input_2,expected',
     [('non-existing file.csv', 'credentials.json',
-      'File non-existing file.csv does not exist.'),
+      'File "non-existing file.csv" does not exist.'),
      ('test_data/alpha_data.csv', 'non-existing_creds.json',
-      'File non-existing_creds.json does not exist')
+      'File "non-existing_creds.json" does not exist')
      ]
     )
 def test_parse_cli_args_raises_error(

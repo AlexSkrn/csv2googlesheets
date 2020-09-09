@@ -23,5 +23,5 @@ def test_parse_file_raises_error_and_prints_info(tmpdir):
         path = os.path.join(tmpdir, filename)
         parse_file(path)
 
-    expected = f'Failed to extract any data from {path}'
+    expected = f'Failed to extract any data from "{path}"'
     assert expected in str(excinfo.value)

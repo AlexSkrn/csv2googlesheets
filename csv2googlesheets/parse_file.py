@@ -5,6 +5,9 @@ import sys
 
 from typing import List
 
+DATA_NOT_EXTRACTED = 'Failed to extract any data from "{}"'
+TITLE_NOT_BUILT = 'Failed to built title for "{}".'
+
 
 def parse_file(path: str, delim: str = ',') -> List[List[str]]:
     """Read data from delim-delimited file and insert data into list."""
@@ -13,7 +16,7 @@ def parse_file(path: str, delim: str = ',') -> List[List[str]]:
         for line in fromF:
             values.append(line.strip().split(delim))
     if not values:
-        sys.exit(f'Failed to extract any data from {path}')
+        sys.exit(DATA_NOT_EXTRACTED.format(path))
     return values
 
 
@@ -22,5 +25,5 @@ def build_spreadsheet_title(filename: str) -> str:
     _, tail = os.path.split(filename)
     head, _ = os.path.splitext(tail)
     if not head:
-        sys.exit(f'Failed to built title for {filename}.')
+        sys.exit(TITLE_NOT_BUILT.format(filename))
     return head

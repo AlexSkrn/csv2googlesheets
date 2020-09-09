@@ -22,5 +22,5 @@ def test_build_spreadsheet_title_raises_error():
     with pytest.raises(SystemExit) as excinfo:
         build_spreadsheet_title('')
 
-    expected = f'Failed to built title for .'
+    expected = f'Failed to built title for "".'
     assert expected in str(excinfo.value)

@@ -1,5 +1,8 @@
 import sys
 
+SHEET_NOT_CREATED = 'No spreadsheetID returned. Spreadsheet not created.'
+SHEET_CREATED = 'Created spreadsheet ID: {}'
+
 
 def create_sheet(service, spreadsheet_title: str) -> str:
     """Create a Google spreadsheet."""
@@ -17,8 +20,8 @@ def create_sheet(service, spreadsheet_title: str) -> str:
     spreadsheet_id = spreadsheet.get('spreadsheetId')
 
     if not spreadsheet_id:
-        sys.exit('SpreadsheetID not returned. Failed to create a spreadsheet.')
+        sys.exit(SHEET_NOT_CREATED)
     else:
-        print(f'Created spreadsheet ID: {spreadsheet_id}')
+        print(SHEET_CREATED.format(spreadsheet_id))
 
     return spreadsheet_id

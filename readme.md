@@ -27,7 +27,7 @@ $ source .venv/bin/activate
 
 ## Использование
 ```
-$ csv2g test_data/alpha_data.csv credentials.json
+$ csv2g data.csv credentials.json
 
 Created spreadsheet ID: 11potDwqU96ckscLNQeU1pm_GPwSuIx0NwlVl2K_uu0w
 8 cells updated.
